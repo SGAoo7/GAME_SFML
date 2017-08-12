@@ -10,6 +10,7 @@ class CustomRenderWindow;
 
 //include all your scene headers here;
 #include "../../ExampleScene.h"
+#include "../../MainScene.h"
 
 class SceneManager
 {
@@ -40,5 +41,6 @@ private:
 
 	//all your scenes
 	ExampleScene exampleScene;
+	MainScene mainScene;
 };
 

@@ -15,6 +15,7 @@ JSprite::~JSprite()
 {
 }
 
+//only use when moving collidable objects;
 void JSprite::Move(float x, float y)
 {
 	collider->CheckPositionRelativeToObject();
@@ -49,4 +50,9 @@ sf::Texture& JSprite::GetTexture()
 Collider& JSprite::GetCollider()
 {
 	return *collider;
+}
+
+void JSprite::SetFillScale(float x, float y)
+{
+	sprite.setTextureRect(sf::IntRect(0, 0, x, y));
 }

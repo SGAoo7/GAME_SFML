@@ -6,6 +6,7 @@
 Scene::Scene()
 {
 	currentScene = this;
+	renderSpritesIndex = 0;
 }
 
 

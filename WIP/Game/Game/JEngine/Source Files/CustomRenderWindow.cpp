@@ -3,7 +3,7 @@
 
 CustomRenderWindow::CustomRenderWindow()
 {
-	window.create(sf::VideoMode(768, 432), "Game", sf::Style::Close);
+	window.create(sf::VideoMode(768, 432), "Flappy Plane", sf::Style::Close);
 	sf::Image icon;
 
 	icon.loadFromFile(pathToIconImage);

@@ -20,6 +20,7 @@ void SceneManager::Init(Game* _game)
 	SetRenderWindow(_game->GetWindow());
 
 	exampleScene.Init(_game, 0);
+	mainScene.Init(_game, 1);
 
 	SwitchScene(0);
 }
@@ -29,6 +30,9 @@ void SceneManager::SwitchScene(int _index)
 
 	exampleScene.~ExampleScene();
 	new (&exampleScene) ExampleScene();
+
+	mainScene.~MainScene();
+	new (&mainScene) MainScene();
 
 	currentScene = scenes[_index];
 	currentSceneIndex = currentScene->sceneIndex;

@@ -5,40 +5,23 @@ GameDataManager::GameDataManager()
 	std::vector<std::string> lines = FileWriter::ReadFromFile("PlayerHighscore");
 
 	if (lines.size() != 0)
-		highscoreDistanceScore = std::stoi(lines[0]);
+		highscore = std::stoi(lines[0]);
 
-	distanceScore = 0;
+	std::cout << highscore << std::endl;
 }
 
 
 GameDataManager::~GameDataManager()
 {
-
-	FileWriter::WriteToFile("PlayerHighscore", std::to_string(highscoreDistanceScore), true);
-
-
+	FileWriter::WriteToFile("PlayerHighscore", std::to_string(highscore), true);
 }
 
-void GameDataManager::SetDistanceScore(int _amount)
+void GameDataManager::SetHighscore(int _amount)
 {
-	distanceScore = _amount;
-
-	if (_amount > highscoreDistanceScore) {
-		SetHighscoreDistanceScore(_amount);
-	}
+	highscore = _amount;
 }
 
-void GameDataManager::SetHighscoreDistanceScore(int _amount)
+int GameDataManager::GetHighScore()
 {
-	highscoreDistanceScore = _amount;
-}
-
-int GameDataManager::GetDistanceScore()
-{
-	return distanceScore;
-}
-
-int GameDataManager::GetHighscoreDistanceScore()
-{
-	return highscoreDistanceScore;
+	return highscore;
 }

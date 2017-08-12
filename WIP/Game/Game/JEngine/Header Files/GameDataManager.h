@@ -13,15 +13,12 @@ public:
 	~GameDataManager();
 
 	//setters
-	void SetDistanceScore(int _amount);
-	void SetHighscoreDistanceScore(int _amount);
+	void SetHighscore(int _amount);
 
 	//getters
-	int GetDistanceScore();
-	int GetHighscoreDistanceScore();
+	int GetHighScore();
 
 private:
-	int distanceScore;
-	int highscoreDistanceScore;
+	int highscore;
 };
 

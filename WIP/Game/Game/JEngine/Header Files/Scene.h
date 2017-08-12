@@ -36,6 +36,8 @@ public:
 public:
 	///maps who needs to be drawn
 	std::map<int, JSprite*> sprites;
+	int renderSpritesIndex;
+
 	std::map<int, JText*> texts;
 	std::map<int, JButton*> buttons;
 

@@ -164,6 +164,11 @@
     <ClCompile Include="JEngine\Source Files\JSprite.cpp" />
     <ClCompile Include="JEngine\Source Files\JFont.cpp" />
     <ClCompile Include="JEngine\Source Files\JText.cpp" />
+    <ClCompile Include="MainScene.cpp" />
+    <ClCompile Include="Obstacle.cpp" />
+    <ClCompile Include="ObstacleManager.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="ScoreManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="JEngine\Header Files\JButton.h" />
@@ -182,6 +187,11 @@
     <ClInclude Include="JEngine\Header Files\JSprite.h" />
     <ClInclude Include="JEngine\Header Files\JFont.h" />
     <ClInclude Include="JEngine\Header Files\JText.h" />
+    <ClInclude Include="MainScene.h" />
+    <ClInclude Include="Obstacle.h" />
+    <ClInclude Include="ObstacleManager.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="ScoreManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

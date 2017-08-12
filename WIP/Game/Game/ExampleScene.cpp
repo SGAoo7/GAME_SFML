@@ -1,10 +1,11 @@
 #include "ExampleScene.h"
+#include "JEngine/Header Files/SceneManager.h"
 
 
 
 ExampleScene::ExampleScene()
 {
-	background = new JSprite(GetScene(), "../Assets/Menu/background.png", true, false);
+	background = new JSprite(GetScene(), "../Assets/Art/Backgrounds/BackgroundMenu.png", true, false);
 	plane = new JSprite(GetScene(), "../Assets/Art/Plane/Yellow/plane.png", true, false);
 }
 
@@ -28,6 +29,10 @@ void ExampleScene::Start()
 void ExampleScene::Update(float _deltaTime)
 {
 	Scene::Update(_deltaTime);
+
+	if (input->KeyPressed(sf::Keyboard::Space)) {
+		sceneManager->SwitchScene(1);
+	}
 }
 
 void ExampleScene::SetupArt()
@@ -37,7 +42,7 @@ void ExampleScene::SetupArt()
 
 	plane->GetSprite().setScale(0.5f, 0.5f);
 	plane->GetSprite().setPosition(200, 200);
-	plane->GetSprite().setTextureRect(sf::IntRect(0, 0, plane->GetTexture().getSize().x / 3, plane->GetTexture().getSize().y));
+	plane->SetFillScale(plane->GetTexture().getSize().x / 4, plane->GetTexture().getSize().y);
 	sprites.insert(std::pair<int, JSprite*>(1, plane));
 }
 

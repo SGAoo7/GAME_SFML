@@ -19,6 +19,9 @@ public:
 	sf::Texture& GetTexture();
 	Collider& GetCollider();
 
+	///setters;
+	void SetFillScale(float x, float y);
+
 private:
 	sf::Sprite sprite;
 	sf::Texture texture;
